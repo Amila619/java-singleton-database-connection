@@ -11,11 +11,11 @@ public class Database {
 
     public static Connection Conn() throws SQLException {
 
-        String host = "127.0.0.1";
-        String port = "3306";
-        String databaseName = "teclms";
-        String userName = "root";
-        String password = "1234";
+        String host = "";
+        String port = "";
+        String databaseName = "";
+        String userName = "";
+        String password = "";
         String url = "jdbc:mysql://" + host + ":" + port + "/" + databaseName + "?sslmode=require";
 
         if (conn == null || conn.isClosed()) {
