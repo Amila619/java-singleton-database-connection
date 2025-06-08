@@ -19,13 +19,14 @@ public class Database {
         String url = "jdbc:mysql://" + host + ":" + port + "/" + databaseName + "?sslmode=require";
 
         if (conn == null || conn.isClosed()) {
-            try {
-                conn = DriverManager.getConnection(url, userName, password);
-            } catch (SQLException e) {
-                e.printStackTrace();
+            synchronized (Database.class) {
+                try {
+                    conn = DriverManager.getConnection(url, userName, password);
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
             }
         }
-
 
         return conn;
     }
