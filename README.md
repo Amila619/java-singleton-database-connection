@@ -6,6 +6,9 @@ This repository demonstrates how to implement a singleton pattern for managing d
 
 - Thread-safe singleton implementation
 - Centralized database connection management
+- Two branches available:
+    - `main`: Basic singleton implementation
+    - `thread-safe`: Enhanced for multi-threaded environments
 - Example usage included
 
 ## Getting Started
